@@ -114,68 +114,24 @@
     initCookieBanner(true);
   });
 
-  /* ---------- Hero video (conditional load) ---------- */
-  const heroVideo = document.getElementById('heroVideo');
-  if (heroVideo) {
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const wideEnough = window.matchMedia('(min-width: 820px)').matches;
-    const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-    const slowNetwork = conn && (conn.saveData === true || /^(slow-2g|2g|3g)$/.test(conn.effectiveType || ''));
-
-    if (!reduced && wideEnough && !slowNetwork) {
-      const src = heroVideo.dataset.src;
-      if (src) {
-        heroVideo.src = src;
-        heroVideo.load();
-        heroVideo.addEventListener('canplay', () => {
-          heroVideo.play().then(() => {
-            heroVideo.classList.add('is-ready');
-          }).catch(() => {
-            /* Autoplay blocked — keep poster image visible */
-          });
-        }, { once: true });
-
-        /* When the clip ends, fade back to the static image */
-        heroVideo.addEventListener('ended', () => {
-          heroVideo.classList.remove('is-ready');
-        }, { once: true });
-      }
-    }
-  }
-
-  /* ---------- Lenis smooth scroll ---------- */
+  /* ---------- Native smooth scroll ---------- */
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let lenis = null;
 
-  if (typeof Lenis !== 'undefined' && !prefersReduced) {
-    lenis = new Lenis({
-      duration: 1.15,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.4,
-      lerp: 0.1,
-    });
-
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
-
-    /* Hook up anchor links for smooth scrollTo */
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const id = link.getAttribute('href');
-        if (!id || id === '#') return;
-        const target = document.querySelector(id);
-        if (!target) return;
-        e.preventDefault();
-        const headerOffset = 80;
-        lenis.scrollTo(target, { offset: -headerOffset, duration: 1.2 });
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      event.preventDefault();
+      const headerOffset = 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({
+        top,
+        behavior: prefersReduced ? 'auto' : 'smooth',
       });
     });
-  }
+  });
 
   /* Sticky header subtle border on scroll */
   const header = document.getElementById('siteHeader');
@@ -186,11 +142,7 @@
     else header.classList.remove('is-scrolled');
   };
 
-  if (lenis) {
-    lenis.on('scroll', ({ scroll }) => onScroll(scroll));
-  } else {
-    window.addEventListener('scroll', () => onScroll(), { passive: true });
-  }
+  window.addEventListener('scroll', () => onScroll(), { passive: true });
   onScroll();
 
   /* Mobile nav toggle */
@@ -220,7 +172,6 @@
     const hasScrollTrigger = typeof ScrollTrigger !== 'undefined';
     if (hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
-      if (lenis) lenis.on('scroll', ScrollTrigger.update);
     }
 
     document.documentElement.classList.add('has-gsap-motion');
