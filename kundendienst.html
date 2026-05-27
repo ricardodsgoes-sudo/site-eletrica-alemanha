@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kundendienst für Reparaturen und allgemeine Elektroarbeiten in Darmstadt — DRI Elektrotechnik unterstützt Sie zuverlässig bei Reparaturen, Störungen, Austausch und Serviceeinsätzen." />
+  <title>Kundendienst &amp; Reparaturen Darmstadt | DRI Elektrotechnik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="DRI Elektrotechnik Startseite">
+        <img src="assets/img/logo.png" alt="DRI Elektrotechnik" class="brand-logo" />
+      </a>
+
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="wallboxen.html">Wallboxen</a></li>
+          <li><a href="pv-anlage.html">PV-Anlage</a></li>
+          <li><a href="kundendienst.html" class="is-active">Kundendienst</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+4961519699081" class="header-phone">
+          <span class="header-phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="header-phone-text">
+            <span class="header-phone-label">Beratung &amp; Service</span>
+            <span class="header-phone-number">06151 9699081</span>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="wallboxen.html">Wallboxen</a></li>
+        <li><a href="pv-anlage.html">PV-Anlage</a></li>
+        <li><a href="kundendienst.html">Kundendienst</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#anfrage" class="btn btn-primary btn-block">Kundendienst anfragen</a>
+    </div>
+  </header>
+
+  <main class="service-page-main">
+
+    <!-- ============== HERO ============== -->
+    <section class="service-page-hero">
+      <div class="container service-page-hero-grid">
+        <div class="service-page-hero-copy">
+          <span class="service-page-eyebrow">Kundendienst</span>
+          <h1>Kundendienst für Reparaturen und allgemeine Elektroarbeiten</h1>
+          <p>
+            Ob Reparatur, Störung, Austausch oder kleinere Elektroarbeiten:
+            DRI Elektrotechnik unterstützt Sie zuverlässig im Kundendienst
+            in Darmstadt und Umgebung.
+          </p>
+          <div class="service-page-hero-actions">
+            <a href="#anfrage" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              Kundendienst anfragen
+            </a>
+            <a href="tel:+4961519699081" class="btn btn-ghost">
+              06151 9699081
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <figure class="service-page-hero-media">
+          <img src="assets/img/haustechnik.webp" alt="Elektriker bei Reparatur und Wartung" loading="eager" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== SCOPE OF WORK ============== -->
+    <section class="scope-section">
+      <div class="container">
+        <header class="scope-header">
+          <span class="eyebrow-line">
+            <span class="eyebrow-text">Unsere Leistungen</span>
+            <span class="eyebrow-bar"></span>
+          </span>
+          <h2 class="section-title">Verlässlicher Service rund um Ihre Elektroinstallation</h2>
+          <p class="section-text">
+            Für private und gewerbliche Kunden — vom akuten Defekt bis zur
+            kleinen Modernisierung. Schnell, fachgerecht und sauber dokumentiert.
+          </p>
+        </header>
+
+        <div class="scope-grid">
+          <article class="scope-card">
+            <span class="scope-card-number">01</span>
+            <h3>Allgemeine Reparaturen</h3>
+            <p>Defekte Steckdosen, Schalter, Leuchten oder Sicherungen — wir bringen Ihre Elektrik schnell wieder in Ordnung.</p>
+          </article>
+          <article class="scope-card">
+            <span class="scope-card-number">02</span>
+            <h3>Störungssuche</h3>
+            <p>Systematische Fehlersuche bei Stromausfällen, Kurzschlüssen oder unklaren Problemen — inkl. Dokumentation.</p>
+          </article>
+          <article class="scope-card">
+            <span class="scope-card-number">03</span>
+            <h3>Austausch &amp; Nachrüstung</h3>
+            <p>Ersatz alter Komponenten, Nachrüstung zusätzlicher Steckdosen, Leuchten, Schalter oder kleiner Verteilerelemente.</p>
+          </article>
+          <article class="scope-card">
+            <span class="scope-card-number">04</span>
+            <h3>Serviceeinsätze</h3>
+            <p>Geplante Vor-Ort-Termine für kleinere Elektroarbeiten — privat oder im Gewerbe, einzeln oder als laufende Betreuung.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== INFO BANNER ============== -->
+    <section class="cost-banner-section">
+      <div class="container">
+        <div class="cost-banner">
+          <div class="cost-banner-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 9v7l4 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="cost-banner-content">
+            <span class="cost-banner-label">Schnelle Termine</span>
+            <span class="cost-banner-value">Kundendienst auf Anfrage</span>
+            <p class="cost-banner-hint">
+              Abrechnung nach Aufwand oder als Pauschalangebot — transparent und
+              fair. Bei dringenden Störungen melden wir uns kurzfristig zurück.
+            </p>
+          </div>
+          <a href="#anfrage" class="btn btn-primary">
+            Jetzt anfragen
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== LEAD FORM ============== -->
+    <section class="lead-section" id="anfrage">
+      <div class="container lead-grid">
+        <div class="lead-intro">
+          <span class="eyebrow-line">
+            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-text">Anfrage</span>
+            <span class="eyebrow-bar"></span>
+          </span>
+          <h2>Kundendienst schnell und unkompliziert anfragen</h2>
+          <p>
+            Beschreiben Sie kurz Ihr Anliegen — bei Bedarf gerne mit Foto.
+            Wir melden uns mit einem klaren nächsten Schritt zurück.
+          </p>
+          <ul class="lead-trust">
+            <li>Elektrofachbetrieb in Darmstadt — schnelle Reaktionszeiten</li>
+            <li>Private und gewerbliche Kunden</li>
+            <li>Fachgerechte Arbeiten nach geltenden Normen</li>
+            <li>Transparente Abrechnung — keine versteckten Kosten</li>
+          </ul>
+        </div>
+
+        <form class="lead-form" action="" method="post" enctype="multipart/form-data" novalidate>
+          <div class="lead-form-header">
+            <h3 class="lead-form-title">Kundendienst anfragen</h3>
+            <p class="lead-form-subtitle">Wir melden uns innerhalb eines Werktages bei Ihnen zurück — bei dringenden Fällen schneller.</p>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="form-label" for="kd-name">Name <span class="required">*</span></label>
+              <input class="form-input" id="kd-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="kd-phone">Telefon <span class="required">*</span></label>
+              <input class="form-input" id="kd-phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="kd-email">E-Mail <span class="required">*</span></label>
+              <input class="form-input" id="kd-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="kd-address">Adresse / Ort <span class="required">*</span></label>
+              <input class="form-input" id="kd-address" name="address" type="text" autocomplete="street-address" placeholder="Straße, PLZ Ort" required />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label class="form-label" for="kd-problem">Art des Problems <span class="required">*</span></label>
+              <input class="form-input" id="kd-problem" name="problem" type="text" placeholder="z. B. defekte Steckdose, Lichtschalter, Stromausfall in einem Raum …" required />
+            </div>
+
+            <div class="form-field form-field-full">
+              <span class="form-label">Dringlichkeit</span>
+              <div class="form-radios" role="radiogroup" aria-label="Dringlichkeit">
+                <label class="form-radio"><input type="radio" name="dringlichkeit" value="normal" checked /> Normal</label>
+                <label class="form-radio"><input type="radio" name="dringlichkeit" value="dringend" /> Dringend</label>
+              </div>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label class="form-label" for="kd-photo">Foto hochladen</label>
+              <input class="form-file" id="kd-photo" name="photo" type="file" accept="image/*" />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label class="form-label" for="kd-message">Nachricht</label>
+              <textarea class="form-textarea" id="kd-message" name="message" placeholder="Weitere Details, Zugang vor Ort, gewünschte Termine …"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Anfrage senden
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <p class="form-note">Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============== PROCESS ============== -->
+    <section class="section process">
+      <div class="container">
+        <header class="process-header">
+          <h2 class="section-title">So läuft Ihr Serviceeinsatz ab</h2>
+        </header>
+
+        <ol class="process-grid">
+          <li class="process-step">
+            <span class="process-number">1</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M5 7a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3h-9l-6 5v-5H8a3 3 0 0 1-3-3V7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M11 10h10M11 14h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3 class="process-title">Anfrage</h3>
+            <p class="process-desc">Sie schildern uns Ihr Anliegen — gerne mit Foto und kurzer Beschreibung.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-number">2</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16 9v7l4 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 class="process-title">Termin</h3>
+            <p class="process-desc">Wir melden uns kurzfristig und vereinbaren einen passenden Termin vor Ort.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-number">3</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="m21 5 5 5-3 3 4 4-3 3-4-4-3 3-5-5 9-9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="m13 19-8 8 3 3 8-8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 class="process-title">Einsatz</h3>
+            <p class="process-desc">Fachgerechte Reparatur, Störungssuche oder Nachrüstung — sauber und zuverlässig.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-number">4</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="7" y="5" width="18" height="22" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M11 11h10M11 16h10M11 21h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="m19 21 1.5 1.5L24 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 class="process-title">Abrechnung</h3>
+            <p class="process-desc">Transparente Rechnung nach Aufwand oder als vereinbartes Pauschalangebot.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============== FINAL CTA ============== -->
+    <section class="cta-section" id="kontakt">
+      <div class="cta-bar">
+        <div class="container cta-bar-inner">
+          <div class="cta-headline">
+            <h2 class="cta-title">Ein Problem mit Ihrer Elektrik?<br />Wir sind für Sie da.</h2>
+            <p class="cta-text">
+              Schnelle Reaktion, fachgerechter Service und transparente Abrechnung —
+              für private und gewerbliche Kunden in Darmstadt und Umgebung.
+            </p>
+          </div>
+
+          <ul class="cta-contact">
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Telefon</span>
+                <a href="tel:+4961519699081" class="cta-contact-value">06151 9699081</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">E-Mail</span>
+                <a href="mailto:info@dri-elektrotechnik.de" class="cta-contact-value">info@dri-elektrotechnik.de</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Standort</span>
+                <span class="cta-contact-value">Darmstadt &amp; Umgebung</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#anfrage" class="btn btn-primary btn-lg cta-bar-btn">
+            Anfrage senden
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand-light" aria-label="DRI Elektrotechnik">
+          <img src="assets/img/logo-white.png" alt="DRI Elektrotechnik" class="footer-logo" />
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="wallboxen.html">Wallboxen Installation</a></li>
+          <li><a href="pv-anlage.html">PV-Anlage</a></li>
+          <li><a href="kundendienst.html">Kundendienst</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul class="footer-contact">
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="tel:+4961519699081">06151 9699081</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="mailto:info@dri-elektrotechnik.de">info@dri-elektrotechnik.de</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+            <span>Darmstadt &amp; Umgebung</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="year"></span> DRI Elektrotechnik. Alle Rechte vorbehalten.</span>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

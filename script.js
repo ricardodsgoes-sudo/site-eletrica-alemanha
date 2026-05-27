@@ -337,7 +337,7 @@
 
   /* Reveal on scroll for sections */
   const revealTargets = document.querySelectorAll(
-    '.hero-content, .subpage-hero-content, .service-hero-copy, .service-visual-card, .overview-card, .service-fit-copy, .blueprint-panel, .detail-card, .commercial-panel, .timeline-item, .feature-card, .benefit-card, .section-header, .section-header-left, .service-card, .planning-card, .process-step, .cta-bar-inner, .energy-hero-copy, .energy-hero-stage, .energy-flow-card, .energy-intro-copy, .energy-dashboard, .energy-modules-header, .energy-module, .energy-argument-card, .energy-process-head, .energy-step, .smart-hero-copy, .smart-control-stage, .smart-benefit-card, .smart-planning-copy, .smart-scene-board, .smart-modules-head, .smart-module, .smart-argument-panel, .smart-process-head, .smart-step'
+    '.hero-content, .feature-card, .section-header, .section-header-left, .service-card, .planning-card, .process-step, .cta-bar-inner, .service-page-hero-copy, .service-page-hero-media, .scope-card, .scope-header, .cost-banner, .lead-intro, .lead-form'
   );
 
   if (initGsapMotion(revealTargets)) return;
