@@ -6,6 +6,114 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Cookie / consent banner ---------- */
+  const consentKey = 'driCookieConsent';
+  const consentVersion = 1;
+  const consentDefaults = {
+    essential: true,
+    statistics: false,
+    marketing: false,
+    externalMedia: false,
+  };
+
+  const readConsent = () => {
+    try {
+      const stored = localStorage.getItem(consentKey);
+      if (!stored) return null;
+      const parsed = JSON.parse(stored);
+      if (!parsed || parsed.version !== consentVersion || !parsed.categories) return null;
+      return {
+        ...consentDefaults,
+        ...parsed.categories,
+        essential: true,
+      };
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const publishConsent = (categories) => {
+    window.driConsent = {
+      ...consentDefaults,
+      ...categories,
+      essential: true,
+    };
+    window.dispatchEvent(new CustomEvent('dri:consentchange', { detail: window.driConsent }));
+  };
+
+  const saveConsent = (categories) => {
+    const next = {
+      ...consentDefaults,
+      ...categories,
+      essential: true,
+    };
+    localStorage.setItem(consentKey, JSON.stringify({
+      version: consentVersion,
+      savedAt: new Date().toISOString(),
+      categories: next,
+    }));
+    publishConsent(next);
+  };
+
+  const existingConsent = readConsent();
+  if (existingConsent) publishConsent(existingConsent);
+  else publishConsent(consentDefaults);
+
+  const initCookieBanner = (forceOpen = false) => {
+    if (document.getElementById('cookieConsent')) return;
+    if (existingConsent && !forceOpen) return;
+
+    const banner = document.createElement('section');
+    banner.className = 'cookie-consent';
+    banner.id = 'cookieConsent';
+    banner.setAttribute('aria-label', 'Cookie-Einstellungen');
+    banner.innerHTML = `
+      <div class="cookie-consent__panel" role="dialog" aria-modal="false" aria-labelledby="cookieConsentTitle">
+        <div class="cookie-consent__intro">
+          <h2 id="cookieConsentTitle">Cookies & Datenschutz</h2>
+          <p>
+            Wir verwenden notwendige Technologien für den Betrieb der Website. Optionale Dienste wie Analytics,
+            Meta Pixel oder Google Maps werden erst nach Zustimmung aktiviert.
+            <a href="datenschutz.html">Datenschutzerklärung</a>
+          </p>
+        </div>
+
+        <div class="cookie-consent__actions">
+          <button class="cookie-btn cookie-btn--ghost" type="button" data-cookie-action="reject">Ablehnen</button>
+          <button class="cookie-btn cookie-btn--primary" type="button" data-cookie-action="accept">Akzeptieren</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(banner);
+    const acceptBtn = banner.querySelector('[data-cookie-action="accept"]');
+    const rejectBtn = banner.querySelector('[data-cookie-action="reject"]');
+
+    const closeBanner = () => {
+      banner.classList.add('is-hiding');
+      window.setTimeout(() => banner.remove(), 220);
+    };
+
+    acceptBtn?.addEventListener('click', () => {
+      saveConsent({ statistics: true, marketing: true, externalMedia: true });
+      closeBanner();
+    });
+
+    rejectBtn?.addEventListener('click', () => {
+      saveConsent({ statistics: false, marketing: false, externalMedia: false });
+      closeBanner();
+    });
+  };
+
+  initCookieBanner();
+
+  document.addEventListener('click', (event) => {
+    const trigger = event.target.closest('[data-cookie-open]');
+    if (!trigger) return;
+    event.preventDefault();
+    initCookieBanner(true);
+  });
+
   /* ---------- Hero video (conditional load) ---------- */
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
