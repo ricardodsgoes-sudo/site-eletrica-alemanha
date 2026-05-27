@@ -3,6 +3,33 @@
    Modern, premium, technical aesthetic.
    ========================================================= */
 
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 380ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+::view-transition-old(root) {
+  animation-name: dri-fade-out;
+}
+::view-transition-new(root) {
+  animation-name: dri-fade-in;
+}
+@keyframes dri-fade-out {
+  to { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes dri-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 /* ---------- Design tokens ---------- */
 :root {
   /* Colors */
