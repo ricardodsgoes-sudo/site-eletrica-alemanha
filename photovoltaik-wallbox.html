@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DRI Elektrotechnik plant und installiert Photovoltaikanlagen, Speicherlösungen und Wallboxen für private und gewerbliche Gebäude." />
+  <title>Photovoltaik, Speicher &amp; Wallbox Darmstadt | DRI Elektrotechnik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="DRI Elektrotechnik Startseite">
+        <img src="assets/img/logo.png" alt="DRI Elektrotechnik" class="brand-logo" />
+      </a>
+
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="elektroinstallation.html">Elektroinstallation</a></li>
+          <li><a href="photovoltaik-wallbox.html" class="is-active">Energie &amp; Wallbox</a></li>
+          <li><a href="smart-home-knx.html">Smart Home</a></li>
+          <li><a href="gewerbe-sicherheit.html">Gewerbe</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+4961519699081" class="header-phone">
+          <span class="header-phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="header-phone-text">
+            <span class="header-phone-label">Beratung &amp; Service</span>
+            <span class="header-phone-number">06151 9699081</span>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="elektroinstallation.html">Elektroinstallation</a></li>
+        <li><a href="photovoltaik-wallbox.html">Energie &amp; Wallbox</a></li>
+        <li><a href="smart-home-knx.html">Smart Home &amp; KNX</a></li>
+        <li><a href="gewerbe-sicherheit.html">Gewerbe &amp; Sicherheit</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="btn btn-primary btn-block">Termin vereinbaren</a>
+    </div>
+  </header>
+
+  <main class="energy-main">
+
+    <section class="energy-hero">
+      <div class="container energy-hero-shell">
+        <div class="energy-hero-copy">
+          <span class="energy-eyebrow">Energie &amp; Wallbox</span>
+          <h1>Energie &amp; Wallbox<br />für moderne Gebäude</h1>
+          <p>
+            Nutzen Sie moderne Energielösungen für mehr Unabhängigkeit, Effizienz und Nachhaltigkeit. DRI Elektrotechnik plant und installiert Photovoltaik, Speicherlösungen und Ladeinfrastruktur passend zu Ihrem Gebäude.
+          </p>
+          <div class="energy-hero-actions">
+            <a href="#kontakt" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              Energieprojekt anfragen
+            </a>
+            <a href="mailto:info@dri-elektrotechnik.de" class="btn btn-ghost">
+              Beratung vereinbaren
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="energy-hero-stage" aria-label="Integriertes Energiesystem">
+          <figure class="energy-hero-media energy-hero-media-main">
+            <img src="assets/img/photovoltaik-dach.webp" alt="Photovoltaikanlage auf einem modernen Wohngebäude" loading="eager" decoding="async" />
+          </figure>
+          <figure class="energy-hero-media energy-hero-media-small energy-hero-media-top">
+            <img src="assets/img/wallbox.webp" alt="Elektroauto an einer Wallbox" loading="eager" decoding="async" />
+          </figure>
+          <figure class="energy-hero-media energy-hero-media-small energy-hero-media-bottom">
+            <img src="assets/img/batteriespeicher.webp" alt="Speichertechnik für Photovoltaik" loading="eager" decoding="async" />
+          </figure>
+          <div class="energy-system-card">
+            <span>System geplant</span>
+            <strong>PV + Speicher + Wallbox</strong>
+            <div class="energy-system-line" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="energy-flow-strip" aria-label="Energiefluss">
+      <div class="container">
+        <div class="energy-flow-board">
+          <article class="energy-flow-card">
+            <span>01</span>
+            <h2>Photovoltaik</h2>
+            <p>Strom am Gebäude erzeugen.</p>
+          </article>
+          <article class="energy-flow-card">
+            <span>02</span>
+            <h2>Speicher</h2>
+            <p>Energie sinnvoll verfügbar machen.</p>
+          </article>
+          <article class="energy-flow-card">
+            <span>03</span>
+            <h2>Wallbox</h2>
+            <p>Ladeinfrastruktur sauber integrieren.</p>
+          </article>
+          <article class="energy-flow-card">
+            <span>04</span>
+            <h2>Verteilung</h2>
+            <p>Technik normgerecht abstimmen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section energy-intro-section">
+      <div class="container energy-intro-grid">
+        <div class="energy-intro-copy">
+          <h2 class="section-title">Strom erzeugen, speichern und intelligent nutzen.</h2>
+          <p>
+            Photovoltaik, Speicher und Wallboxen machen Gebäude zukunftsfähiger. Damit die Technik zuverlässig funktioniert, müssen Planung, Installation und Abstimmung der Komponenten sauber zusammenspielen.
+          </p>
+          <p>
+            Wir unterstützen Sie von der ersten Beratung bis zur fachgerechten Umsetzung.
+          </p>
+        </div>
+
+        <div class="energy-dashboard" aria-label="Technische Abstimmung der Energielösung">
+          <div class="energy-dashboard-header">
+            <span>DRI Energieplan</span>
+            <strong>Komponenten im Verbund</strong>
+          </div>
+          <div class="energy-dashboard-map">
+            <span class="energy-node energy-node-pv">PV</span>
+            <span class="energy-node energy-node-storage">Speicher</span>
+            <span class="energy-node energy-node-charge">Wallbox</span>
+            <span class="energy-node energy-node-house">Gebäude</span>
+            <span class="energy-cable energy-cable-a"></span>
+            <span class="energy-cable energy-cable-b"></span>
+            <span class="energy-cable energy-cable-c"></span>
+          </div>
+          <ul class="energy-dashboard-list">
+            <li><span></span> Verbrauch und Nutzung prüfen</li>
+            <li><span></span> Technik sauber aufeinander abstimmen</li>
+            <li><span></span> Fachgerecht installieren und dokumentieren</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section energy-modules-section" id="leistungen">
+      <div class="container">
+        <header class="energy-modules-header">
+          <span class="energy-eyebrow">Leistungsbereiche</span>
+          <h2 class="section-title">Energielösungen als abgestimmtes System</h2>
+        </header>
+
+        <div class="energy-modules">
+          <article class="energy-module" id="photovoltaik">
+            <figure>
+              <img src="assets/img/photovoltaik-wohnhaus.webp" alt="Photovoltaik auf einem Wohnhausdach" loading="lazy" decoding="async" />
+            </figure>
+            <div class="energy-module-copy">
+              <span>Photovoltaik</span>
+              <h3>Stromerzeugung passend zu Gebäude und Verbrauch</h3>
+              <p>Planung und Installation von PV-Anlagen passend zu Dachfläche, Verbrauch, Nutzung und technischer Infrastruktur.</p>
+              <ul>
+                <li>Gebäudeanalyse</li>
+                <li>Anlagenplanung</li>
+                <li>Elektroanschluss</li>
+                <li>Normgerechte Umsetzung</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="energy-module energy-module-reverse" id="speicher">
+            <figure>
+              <img src="assets/img/batteriespeicher.webp" alt="Batteriespeicher und Wechselrichtertechnik" loading="lazy" decoding="async" />
+            </figure>
+            <div class="energy-module-copy">
+              <span>Speicherlösungen</span>
+              <h3>Energie speichern und bedarfsgerecht nutzen</h3>
+              <p>Speicher, Wechselrichter und Elektroverteilung werden technisch sinnvoll abgestimmt, damit die Lösung zuverlässig arbeitet.</p>
+              <ul>
+                <li>Speicherintegration</li>
+                <li>Lastprofil prüfen</li>
+                <li>Komponenten abstimmen</li>
+                <li>Zuverlässige Installation</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="energy-module" id="wallbox">
+            <figure>
+              <img src="assets/img/wallbox.webp" alt="Elektroauto an einer Wallbox" loading="lazy" decoding="async" />
+            </figure>
+            <div class="energy-module-copy">
+              <span>Wallbox &amp; Ladeinfrastruktur</span>
+              <h3>Laden zuhause, im Betrieb oder im Mehrparteienhaus</h3>
+              <p>Ladelösungen werden passend zu Gebäudeanschluss, Nutzung und Energiesystem umgesetzt.</p>
+              <ul>
+                <li>Standortprüfung</li>
+                <li>Anschlussplanung</li>
+                <li>Wallbox-Montage</li>
+                <li>Ladebereit übergeben</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="energy-module energy-module-reverse" id="systemabstimmung">
+            <figure>
+              <img src="assets/img/ladeinfrastruktur.webp" alt="Ladeinfrastruktur im gewerblichen Umfeld" loading="lazy" decoding="async" />
+            </figure>
+            <div class="energy-module-copy">
+              <span>Systemabstimmung</span>
+              <h3>Photovoltaik, Speicher, Wallbox und Verteilung aus einer Hand</h3>
+              <p>Eine gute Energielösung entsteht erst, wenn alle Komponenten als technisches Gesamtsystem geplant werden.</p>
+              <ul>
+                <li>Komponentenplanung</li>
+                <li>Elektroverteilung</li>
+                <li>Technische Prüfung</li>
+                <li>Saubere Umsetzung</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="energy-argument-section">
+      <div class="container">
+        <div class="energy-argument-card">
+          <div class="energy-argument-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M26 4 10 26h12l-2 18 18-26H26V4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Energieprojekte brauchen mehr als einzelne Geräte.</h2>
+            <p>Eine gute Lösung entsteht erst, wenn Photovoltaik, Speicher, Wallbox und Elektroverteilung sinnvoll aufeinander abgestimmt werden. Genau hier liegt der Vorteil einer fachgerechten Planung durch einen Elektrofachbetrieb.</p>
+          </div>
+          <a href="#kontakt" class="btn btn-primary planning-btn">Projekt besprechen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section energy-process-section">
+      <div class="container">
+        <div class="energy-process-head">
+          <span class="energy-eyebrow">Projektablauf</span>
+          <h2 class="section-title">Von der Beratung bis zur fertigen Energielösung</h2>
+        </div>
+
+        <ol class="energy-process-track">
+          <li class="energy-step">
+            <span>01</span>
+            <h3>Bedarf klären</h3>
+            <p>Wir prüfen Gebäude, Verbrauch, Nutzung und technische Voraussetzungen.</p>
+          </li>
+          <li class="energy-step">
+            <span>02</span>
+            <h3>Lösung planen</h3>
+            <p>Wir entwickeln eine passende Lösung für Photovoltaik, Speicher oder Ladeinfrastruktur.</p>
+          </li>
+          <li class="energy-step">
+            <span>03</span>
+            <h3>Angebot erstellen</h3>
+            <p>Sie erhalten ein klares Angebot mit transparentem Leistungsumfang.</p>
+          </li>
+          <li class="energy-step">
+            <span>04</span>
+            <h3>Installation umsetzen</h3>
+            <p>Die technische Umsetzung erfolgt fachgerecht und zuverlässig.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-section" id="kontakt">
+      <div class="cta-bar">
+        <div class="container cta-bar-inner">
+          <div class="cta-headline">
+            <h2 class="cta-title">Sie möchten Energie smarter nutzen?</h2>
+            <p class="cta-text">
+              Ob Photovoltaik, Speicher oder Wallbox - wir beraten Sie persönlich und entwickeln eine Lösung, die zu Ihrem Gebäude passt.
+            </p>
+          </div>
+
+          <ul class="cta-contact">
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Telefon</span>
+                <a href="tel:+4961519699081" class="cta-contact-value">06151 9699081</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">E-Mail</span>
+                <a href="mailto:info@dri-elektrotechnik.de" class="cta-contact-value">info@dri-elektrotechnik.de</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Standort</span>
+                <span class="cta-contact-value">Darmstadt &amp; Umgebung</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="mailto:info@dri-elektrotechnik.de" class="btn btn-primary btn-lg cta-bar-btn">
+            Beratung vereinbaren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand-light" aria-label="DRI Elektrotechnik">
+          <img src="assets/img/logo-white.png" alt="DRI Elektrotechnik" class="footer-logo" />
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="elektroinstallation.html#neubauinstallation">Elektroinstallation</a></li>
+          <li><a href="#photovoltaik">Photovoltaik</a></li>
+          <li><a href="#speicher">Speicherlösungen</a></li>
+          <li><a href="#wallbox">Wallbox &amp; Laden</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Referenzen</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul class="footer-contact">
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="tel:+4961519699081">06151 9699081</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="mailto:info@dri-elektrotechnik.de">info@dri-elektrotechnik.de</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+            <span>Darmstadt &amp; Umgebung</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="year"></span> DRI Elektrotechnik. Alle Rechte vorbehalten.</span>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

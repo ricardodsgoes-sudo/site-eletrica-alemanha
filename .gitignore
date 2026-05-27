@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Build / cache
+dist/
+.cache/
+
+# Logs
+*.log
+
+# Originais do cliente (não usados pelo site em produção)
+imagem hero.png
+logo sem fundo.png
+logo sem fundo branca.png
+template home.png
+video hero.mp4
+copy_site_*.docx
+ChatGPT Image*.png
+
+# Memory / sessão local
+memory/

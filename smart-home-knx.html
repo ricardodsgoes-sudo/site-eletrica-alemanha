@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DRI Elektrotechnik plant Smart Home und KNX-Lösungen für Licht, Beschattung, Heizung, Sicherheit und Gebäudesteuerung." />
+  <title>Smart Home &amp; KNX Darmstadt | Intelligente Gebäudetechnik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="DRI Elektrotechnik Startseite">
+        <img src="assets/img/logo.png" alt="DRI Elektrotechnik" class="brand-logo" />
+      </a>
+
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="elektroinstallation.html">Elektroinstallation</a></li>
+          <li><a href="photovoltaik-wallbox.html">Energie &amp; Wallbox</a></li>
+          <li><a href="smart-home-knx.html" class="is-active">Smart Home</a></li>
+          <li><a href="gewerbe-sicherheit.html">Gewerbe</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+4961519699081" class="header-phone">
+          <span class="header-phone-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="header-phone-text">
+            <span class="header-phone-label">Beratung &amp; Service</span>
+            <span class="header-phone-number">06151 9699081</span>
+          </span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="elektroinstallation.html">Elektroinstallation</a></li>
+        <li><a href="photovoltaik-wallbox.html">Energie &amp; Wallbox</a></li>
+        <li><a href="smart-home-knx.html">Smart Home &amp; KNX</a></li>
+        <li><a href="gewerbe-sicherheit.html">Gewerbe &amp; Sicherheit</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="btn btn-primary btn-block">Termin vereinbaren</a>
+    </div>
+  </header>
+
+  <main class="smart-main">
+
+    <section class="smart-hero">
+      <div class="container smart-hero-inner">
+        <div class="smart-hero-copy">
+          <span class="smart-eyebrow">Smart Home &amp; KNX</span>
+          <h1>Smart Home und KNX für moderne Gebäudesteuerung</h1>
+          <p>
+            Mehr Komfort, mehr Effizienz und mehr Kontrolle: DRI Elektrotechnik plant und realisiert intelligente Gebäudetechnik für private und gewerbliche Objekte.
+          </p>
+          <div class="smart-hero-actions">
+            <a href="#kontakt" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 12h5l2-6 2 12 2-6h5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Smart-Home-Beratung anfragen
+            </a>
+            <a href="#moeglichkeiten" class="btn btn-ghost">
+              Möglichkeiten ansehen
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="smart-control-stage" aria-label="Smart Home Steuerung">
+          <figure class="smart-room-photo">
+            <img src="assets/img/smart-home-control.webp" alt="Smart Home Steuerung per Smartphone" loading="eager" decoding="async" />
+          </figure>
+          <div class="smart-control-panel">
+            <div class="smart-panel-top">
+              <span>KNX System</span>
+              <strong>Gebäude aktiv</strong>
+            </div>
+            <div class="smart-dials" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <ul>
+              <li><span></span>Lichtszene Abend</li>
+              <li><span></span>Beschattung automatisch</li>
+              <li><span></span>Heizung effizient</li>
+            </ul>
+          </div>
+          <div class="smart-signal smart-signal-a"></div>
+          <div class="smart-signal smart-signal-b"></div>
+          <div class="smart-signal smart-signal-c"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="smart-benefits" aria-label="Smart Home Vorteile">
+      <div class="container smart-benefit-grid">
+        <article class="smart-benefit-card">
+          <small>SCENE 01</small>
+          <span>Komfort</span>
+          <p>Steuern Sie Licht, Beschattung und Heizung komfortabel und intuitiv.</p>
+        </article>
+        <article class="smart-benefit-card">
+          <small>AUTO 02</small>
+          <span>Effizienz</span>
+          <p>Nutzen Sie Energie bewusster und automatisieren Sie wiederkehrende Abläufe.</p>
+        </article>
+        <article class="smart-benefit-card">
+          <small>SENS 03</small>
+          <span>Sicherheit</span>
+          <p>Verbinden Sie Sensoren, Präsenzmelder und Sicherheitstechnik sinnvoll miteinander.</p>
+        </article>
+        <article class="smart-benefit-card">
+          <small>KNX 04</small>
+          <span>Erweiterbarkeit</span>
+          <p>Setzen Sie auf Technik, die mit Ihren Anforderungen wachsen kann.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section smart-planning-section">
+      <div class="container smart-planning-grid">
+        <div class="smart-planning-copy">
+          <span class="smart-eyebrow">Planung vor Technik</span>
+          <h2 class="section-title">Ein intelligentes Gebäude beginnt mit guter Planung.</h2>
+          <p>
+            Licht, Beschattung, Heizung, Sicherheit und Energieverbrauch lassen sich heute intelligent vernetzen. Entscheidend ist dabei nicht nur die Technik, sondern die saubere Planung im Hintergrund.
+          </p>
+          <p>
+            DRI Elektrotechnik unterstützt Sie bei Smart-Home- und KNX-Lösungen, die zu Ihrem Alltag und Ihrem Gebäude passen.
+          </p>
+        </div>
+
+        <div class="smart-scene-board" aria-label="Smart-Home-Planung mit Kunden">
+          <figure>
+            <img src="assets/img/smart-planung-beratung.webp" alt="Beratungsgespräch zu Smart-Home-Planung mit Grundriss" loading="lazy" decoding="async" />
+          </figure>
+          <div class="smart-scene-list">
+            <span>Licht</span>
+            <span>Jalousie</span>
+            <span>Heizung</span>
+            <span>Sicherheit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section smart-modules-section" id="moeglichkeiten">
+      <div class="container">
+        <header class="smart-modules-head">
+          <span class="smart-eyebrow">Möglichkeiten</span>
+          <h2 class="section-title">Gebäudesteuerung, die logisch zusammenarbeitet</h2>
+        </header>
+
+        <div class="smart-bento">
+          <article class="smart-module smart-module-large" id="knx-planung">
+            <figure>
+              <img src="assets/img/smart-knx-planung.webp" alt="Elektrofachmann plant KNX-Gebäudesteuerung am Tablet" loading="lazy" decoding="async" />
+            </figure>
+            <div>
+              <span>KNX-Planung</span>
+              <div class="smart-module-meta"><strong>BUS-Plan</strong><strong>Logik</strong><strong>Dokumentation</strong></div>
+              <h3>Professionelle Planung intelligenter Gebäudesteuerung auf Basis des KNX-Standards.</h3>
+              <ul>
+                <li>Individuelles Steuerungskonzept</li>
+                <li>Gebäudeautomation</li>
+                <li>Programmierung</li>
+                <li>Zukunftssichere Erweiterung</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="smart-module" id="lichtsteuerung">
+            <figure>
+              <img src="assets/img/smart-licht-szene.webp" alt="Wohnbereich mit warmer Lichtszene und indirekter Beleuchtung" loading="lazy" decoding="async" />
+            </figure>
+            <div>
+              <span>Lichtsteuerung</span>
+              <div class="smart-module-meta"><strong>Szenen</strong><strong>Präsenz</strong></div>
+              <h3>Beleuchtungsszenen für Wohn- und Arbeitsbereiche.</h3>
+              <ul>
+                <li>Lichtszenen</li>
+                <li>Automatische Steuerung</li>
+                <li>Präsenzabhängige Beleuchtung</li>
+                <li>Mehr Komfort im Alltag</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="smart-module" id="beschattung">
+            <figure>
+              <img src="assets/img/smart-jalousie.webp" alt="Automatisierte Jalousien an grossen Fensterfronten" loading="lazy" decoding="async" />
+            </figure>
+            <div>
+              <span>Beschattung &amp; Jalousien</span>
+              <div class="smart-module-meta"><strong>Zeit</strong><strong>Wetter</strong></div>
+              <h3>Automatisierte Steuerung von Rollläden, Jalousien und Sonnenschutz.</h3>
+              <ul>
+                <li>Jalousiesteuerung</li>
+                <li>Zeitsteuerung</li>
+                <li>Wetterabhängige Automationen</li>
+                <li>Komfort und Energieeffizienz</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+
+          <article class="smart-module smart-module-dark" id="heizung-energie">
+            <figure>
+              <img src="assets/img/smart-thermostat.webp" alt="Smartes Thermostat an der Wand mit gemütlichem Wohnbereich" loading="lazy" decoding="async" />
+            </figure>
+            <div>
+              <span>Heizung &amp; Energie</span>
+              <div class="smart-module-meta"><strong>Effizienz</strong><strong>Verbrauch</strong></div>
+              <h3>Intelligente Steuerung für mehr Effizienz und besseren Komfort.</h3>
+              <ul>
+                <li>Heizungssteuerung</li>
+                <li>Präsenzmelder</li>
+                <li>Energieoptimierung</li>
+                <li>Vernetzte Gebäudetechnik</li>
+              </ul>
+              <a href="#kontakt">Mehr erfahren</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="smart-argument-section">
+      <div class="container">
+        <div class="smart-argument-panel">
+          <figure>
+            <img src="assets/img/smart-sicherheit.webp" alt="Bedienpanel für ein zuverlässiges Smart Home" loading="lazy" decoding="async" />
+          </figure>
+          <div class="smart-argument-copy">
+            <span class="smart-eyebrow">Durchdachtes System</span>
+            <h2>Smart Home ist kein Spielzeug, wenn es richtig geplant wird.</h2>
+            <p>Eine professionelle Lösung muss zuverlässig funktionieren, logisch bedienbar sein und auch in Zukunft erweitert werden können.</p>
+            <p>Deshalb verbinden wir technische Planung, Installation und Programmierung zu einem durchdachten Gesamtsystem.</p>
+          </div>
+          <a href="#kontakt" class="btn btn-primary planning-btn">Smart Home planen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section smart-process-section">
+      <div class="container smart-process-grid">
+        <div class="smart-process-head">
+          <span class="smart-eyebrow">Ablauf</span>
+          <h2 class="section-title">So entsteht Ihre intelligente Gebäudetechnik</h2>
+        </div>
+        <ol class="smart-process-list">
+          <li class="smart-step">
+            <span>01</span>
+            <div>
+              <h3>Anforderungen verstehen</h3>
+              <p>Wir klären, welche Funktionen wirklich zu Ihrem Alltag passen.</p>
+            </div>
+          </li>
+          <li class="smart-step">
+            <span>02</span>
+            <div>
+              <h3>System planen</h3>
+              <p>Wir entwickeln ein Steuerungskonzept für Licht, Beschattung, Heizung und Sicherheit.</p>
+            </div>
+          </li>
+          <li class="smart-step">
+            <span>03</span>
+            <div>
+              <h3>Installation &amp; Programmierung</h3>
+              <p>Die Technik wird fachgerecht installiert und passend programmiert.</p>
+            </div>
+          </li>
+          <li class="smart-step">
+            <span>04</span>
+            <div>
+              <h3>Einweisung &amp; Betreuung</h3>
+              <p>Sie erhalten eine verständliche Einweisung und können Ihr System sicher nutzen.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-section" id="kontakt">
+      <div class="cta-bar">
+        <div class="container cta-bar-inner">
+          <div class="cta-headline">
+            <h2 class="cta-title">Planen Sie Ihr Gebäude intelligenter.</h2>
+            <p class="cta-text">
+              Ob Neubau, Sanierung oder Modernisierung - wir entwickeln eine Smart-Home-Lösung, die zuverlässig funktioniert und zu Ihrem Gebäude passt.
+            </p>
+          </div>
+
+          <ul class="cta-contact">
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Telefon</span>
+                <a href="tel:+4961519699081" class="cta-contact-value">06151 9699081</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">E-Mail</span>
+                <a href="mailto:info@dri-elektrotechnik.de" class="cta-contact-value">info@dri-elektrotechnik.de</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </span>
+              <div>
+                <span class="cta-contact-label">Standort</span>
+                <span class="cta-contact-value">Darmstadt &amp; Umgebung</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="mailto:info@dri-elektrotechnik.de" class="btn btn-primary btn-lg cta-bar-btn">
+            Beratungstermin vereinbaren
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand-light" aria-label="DRI Elektrotechnik">
+          <img src="assets/img/logo-white.png" alt="DRI Elektrotechnik" class="footer-logo" />
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="elektroinstallation.html">Elektroinstallation</a></li>
+          <li><a href="photovoltaik-wallbox.html">Energie &amp; Wallbox</a></li>
+          <li><a href="#knx-planung">KNX-Planung</a></li>
+          <li><a href="#lichtsteuerung">Lichtsteuerung</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Referenzen</a></li>
+          <li><a href="#">Karriere</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul class="footer-contact">
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="tel:+4961519699081">06151 9699081</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <a href="mailto:info@dri-elektrotechnik.de">info@dri-elektrotechnik.de</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+            <span>Darmstadt &amp; Umgebung</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="year"></span> DRI Elektrotechnik. Alle Rechte vorbehalten.</span>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
