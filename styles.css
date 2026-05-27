@@ -90,7 +90,15 @@ img, svg { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
-h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); letter-spacing: -0.02em; line-height: 1.15; }
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+}
 
 /* ---------- Container ---------- */
 .container {
@@ -1273,6 +1281,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); letter-spacing: -0
   font-weight: 600;
   margin-bottom: 16px;
   color: var(--ink);
+  text-wrap: balance;
 }
 .section-text {
   color: var(--ink-2);
@@ -1627,6 +1636,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); letter-spacing: -0
   margin: 0 0 12px;
   line-height: 1.2;
   letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 .cta-text {
   color: rgba(255, 255, 255, 0.72);
@@ -3666,6 +3676,11 @@ a.cta-contact-value:hover { color: var(--accent); }
   color: var(--ink-2);
   font-size: clamp(1rem, 1.2vw, 1.1rem);
   line-height: 1.7;
+  text-wrap: pretty;
+}
+.service-page-hero p strong {
+  color: var(--brand);
+  font-weight: 700;
 }
 .service-page-hero-actions {
   display: flex;
@@ -4106,8 +4121,9 @@ a.cta-contact-value:hover { color: var(--accent); }
   font-size: clamp(2.3rem, 5vw, 4rem);
   line-height: 1.06;
   color: var(--ink);
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .legal-hero p {
   max-width: 680px;
@@ -4184,12 +4200,25 @@ a.cta-contact-value:hover { color: var(--accent); }
   .service-page-hero {
     padding: 120px 0 64px;
   }
+  .service-page-hero-copy,
+  .scope-header,
+  .lead-intro {
+    width: 100%;
+    max-width: min(326px, calc(100vw - 64px));
+    margin-inline: auto;
+  }
   .service-page-hero h1 {
-    font-size: clamp(1.82rem, 7.2vw, 2.18rem);
-    line-height: 1.12;
+    font-size: clamp(1.52rem, 6vw, 1.86rem);
+    line-height: 1.16;
     max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .service-page-hero p {
+    font-size: 0.96rem;
+    line-height: 1.62;
+    max-width: 100%;
   }
   .service-page-hero-copy,
   .service-page-hero-grid,
@@ -4197,15 +4226,27 @@ a.cta-contact-value:hover { color: var(--accent); }
     max-width: calc(100vw - 40px);
     min-width: 0;
   }
-  .service-page-hero h1,
-  .service-page-hero p,
   .scope-header .section-title,
-  .scope-header .section-text,
-  .scope-card h3,
-  .scope-card p,
-  .cost-banner-value,
-  .cost-banner-hint,
   .lead-intro h2,
+  .process-header .section-title {
+    font-size: clamp(1.35rem, 5.7vw, 1.68rem);
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+  .service-page-hero h1,
+  .scope-header .section-title,
+  .scope-card h3,
+  .cost-banner-value,
+  .lead-intro h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .service-page-hero p,
+  .scope-header .section-text,
+  .scope-card p,
+  .cost-banner-hint,
   .lead-intro > p,
   .lead-trust li {
     max-width: 100%;
@@ -4218,15 +4259,20 @@ a.cta-contact-value:hover { color: var(--accent); }
     min-width: 0;
   }
   .legal-hero h1,
+  .legal-content h2 {
+    max-width: 100%;
+    text-wrap: balance;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
   .legal-hero p,
-  .legal-content h2,
   .legal-content p {
     max-width: 100%;
     overflow-wrap: anywhere;
     word-break: break-word;
   }
   .legal-hero h1 {
-    font-size: clamp(2rem, 8vw, 2.35rem);
+    font-size: clamp(1.78rem, 7vw, 2.12rem);
   }
   .legal-hero .container,
   .legal-section .container {
