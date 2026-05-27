@@ -114,8 +114,26 @@
     initCookieBanner(true);
   });
 
-  /* ---------- Native smooth scroll ---------- */
+  /* ---------- Smooth scroll ---------- */
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
+
+  if (typeof Lenis !== 'undefined' && !prefersReduced) {
+    lenis = new Lenis({
+      duration: 1.15,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.4,
+      lerp: 0.1,
+    });
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -125,11 +143,15 @@
       if (!target) return;
       event.preventDefault();
       const headerOffset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
-      window.scrollTo({
-        top,
-        behavior: prefersReduced ? 'auto' : 'smooth',
-      });
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -headerOffset, duration: 1.2 });
+      } else {
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({
+          top,
+          behavior: prefersReduced ? 'auto' : 'smooth',
+        });
+      }
     });
   });
 
@@ -142,7 +164,11 @@
     else header.classList.remove('is-scrolled');
   };
 
-  window.addEventListener('scroll', () => onScroll(), { passive: true });
+  if (lenis) {
+    lenis.on('scroll', ({ scroll }) => onScroll(scroll));
+  } else {
+    window.addEventListener('scroll', () => onScroll(), { passive: true });
+  }
   onScroll();
 
   /* Mobile nav toggle */
@@ -172,6 +198,7 @@
     const hasScrollTrigger = typeof ScrollTrigger !== 'undefined';
     if (hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
+      if (lenis) lenis.on('scroll', ScrollTrigger.update);
     }
 
     document.documentElement.classList.add('has-gsap-motion');
