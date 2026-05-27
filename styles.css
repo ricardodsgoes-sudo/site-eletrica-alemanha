@@ -3635,7 +3635,7 @@ a.cta-contact-value:hover { color: var(--accent); }
 .service-page-hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.74fr) minmax(560px, 1.26fr);
+  grid-template-columns: minmax(460px, 0.9fr) minmax(520px, 1.1fr);
   gap: clamp(34px, 4.8vw, 64px);
   align-items: center;
 }
@@ -3663,12 +3663,16 @@ a.cta-contact-value:hover { color: var(--accent); }
   background: var(--brand);
 }
 .service-page-hero h1 {
-  font-size: clamp(2.25rem, 4.6vw, 3.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
   font-weight: 700;
   color: var(--ink);
   line-height: 1.08;
   letter-spacing: -0.025em;
   margin: 0;
+  hyphens: none;
+}
+.title-part {
+  display: inline;
 }
 .service-page-hero p {
   margin: 24px 0 0;
@@ -4204,16 +4208,22 @@ a.cta-contact-value:hover { color: var(--accent); }
   .scope-header,
   .lead-intro {
     width: 100%;
-    max-width: min(326px, calc(100vw - 64px));
+    max-width: min(320px, calc(100vw - 70px));
     margin-inline: auto;
   }
   .service-page-hero h1 {
-    font-size: clamp(1.52rem, 6vw, 1.86rem);
+    font-size: clamp(1.58rem, 6.15vw, 1.92rem);
     line-height: 1.16;
     max-width: 100%;
     text-wrap: balance;
     overflow-wrap: normal;
     word-break: normal;
+  }
+  .service-page-hero h1 br {
+    display: block;
+  }
+  .title-part {
+    display: block;
   }
   .service-page-hero p {
     font-size: 0.96rem;
@@ -4223,8 +4233,26 @@ a.cta-contact-value:hover { color: var(--accent); }
   .service-page-hero-copy,
   .service-page-hero-grid,
   .service-page-hero-media {
-    max-width: calc(100vw - 40px);
+    max-width: min(320px, calc(100vw - 70px));
     min-width: 0;
+    margin-inline: auto;
+  }
+  .scope-grid,
+  .scope-card,
+  .cost-banner,
+  .lead-form,
+  .lead-support-image {
+    width: 100%;
+    max-width: min(320px, calc(100vw - 70px));
+    margin-inline: auto;
+  }
+  .service-page-hero-actions,
+  .service-page-hero-actions .btn,
+  .cost-banner .btn,
+  .form-actions .btn,
+  .cta-bar-btn {
+    width: 100%;
+    max-width: min(320px, calc(100vw - 70px));
   }
   .scope-header .section-title,
   .lead-intro h2,
