@@ -31,6 +31,8 @@ ChatGPT Image*.png
 # Local memory/session files
 memory/
 dev/
+content/
+CLAUDE.md
 
 # Temporary browser, review and audit artifacts
 .chrome-*
