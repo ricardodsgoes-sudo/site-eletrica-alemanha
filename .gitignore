@@ -19,7 +19,7 @@ dist/
 # Logs
 *.log
 
-# Originais do cliente (não usados pelo site em produção)
+# Client originals not used in production
 imagem hero.png
 logo sem fundo.png
 logo sem fundo branca.png
@@ -28,11 +28,14 @@ video hero.mp4
 copy_site_*.docx
 ChatGPT Image*.png
 
-# Memory / sessão local
+# Local memory/session files
 memory/
-
 dev/
 
-# Temporary browser and review artifacts
+# Temporary browser, review and audit artifacts
 .chrome-*
 check-*.png
+screencapture-*.png
+*pagespeed*.png
+lighthouse-*.html
+lighthouse-*.json
