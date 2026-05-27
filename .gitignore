@@ -32,3 +32,7 @@ ChatGPT Image*.png
 memory/
 
 dev/
+
+# Temporary browser and review artifacts
+.chrome-*
+check-*.png
