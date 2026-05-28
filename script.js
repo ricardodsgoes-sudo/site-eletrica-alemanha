@@ -118,6 +118,56 @@
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lenis = null;
 
+  /* ---------- Hero video (play once, then keep static image) ---------- */
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo && !prefersReduced) {
+    const src = heroVideo.dataset.src;
+    if (src) {
+      heroVideo.src = src;
+      heroVideo.load();
+
+      const revealVideo = () => {
+        heroVideo.classList.add('is-ready');
+      };
+
+      const showStaticHero = () => {
+        const wasVisible = heroVideo.classList.contains('is-ready');
+
+        heroVideo.classList.remove('is-ready');
+        heroVideo.pause();
+
+        const unloadVideo = () => {
+          heroVideo.removeAttribute('src');
+          heroVideo.load();
+        };
+
+        if (!wasVisible) {
+          unloadVideo();
+          return;
+        }
+
+        let fallbackTimer = null;
+        const cleanupAfterFade = (event) => {
+          if (event && event.propertyName !== 'opacity') return;
+          if (fallbackTimer) window.clearTimeout(fallbackTimer);
+          heroVideo.removeEventListener('transitionend', cleanupAfterFade);
+          unloadVideo();
+        };
+
+        heroVideo.addEventListener('transitionend', cleanupAfterFade);
+        fallbackTimer = window.setTimeout(cleanupAfterFade, 1100);
+      };
+
+      heroVideo.addEventListener('playing', revealVideo, { once: true });
+      heroVideo.addEventListener('ended', showStaticHero, { once: true });
+
+      const playPromise = heroVideo.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(showStaticHero);
+      }
+    }
+  }
+
   if (typeof Lenis !== 'undefined' && !prefersReduced) {
     lenis = new Lenis({
       duration: 1.15,

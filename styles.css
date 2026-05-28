@@ -379,7 +379,9 @@ h1, h2, h3, h4 {
 }
 .hero-bg-video {
   opacity: 0;
-  transition: opacity .6s var(--ease);
+  object-fit: contain;
+  object-position: center;
+  transition: opacity .9s var(--ease);
   pointer-events: none;
 }
 .hero-bg-video.is-ready {

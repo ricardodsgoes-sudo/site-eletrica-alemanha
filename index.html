@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
   <link rel="preload" as="image" href="assets/img/hero-bg-optimized.webp" fetchpriority="high" />
+  <link rel="preload" as="video" href="assets/video/hero.mp4" type="video/mp4" />
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,7 +21,7 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="DRI Elektrotechnik Startseite">
-        <img src="assets/img/logo.webp" alt="DRI Elektrotechnik" class="brand-logo" width="836" height="454" />
+        <img src="assets/img/logo-transparent.png" alt="DRI Elektrotechnik" class="brand-logo" width="836" height="454" />
       </a>
 
       <nav class="primary-nav" aria-label="Hauptnavigation">
@@ -70,6 +71,16 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
         <img src="assets/img/hero-bg-optimized.webp" alt="" width="1400" height="788" loading="eager" decoding="async" fetchpriority="high" class="hero-bg-image" />
+        <video
+          id="heroVideo"
+          class="hero-bg-video"
+          muted
+          playsinline
+          autoplay
+          preload="metadata"
+          poster="assets/img/hero-bg-optimized.webp"
+          data-src="assets/video/hero.mp4"
+        ></video>
         <div class="hero-bg-overlay"></div>
       </div>
 
