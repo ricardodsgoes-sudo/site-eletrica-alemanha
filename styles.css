@@ -386,6 +386,12 @@ h1, h2, h3, h4 {
 }
 .hero-bg-video.is-ready {
   opacity: 1;
+  transition-duration: .12s;
+}
+@media (min-aspect-ratio: 16 / 9) {
+  .hero-bg-video {
+    object-fit: cover;
+  }
 }
 .hero-bg-overlay {
   position: absolute; inset: 0;
